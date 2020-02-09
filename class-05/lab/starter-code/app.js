@@ -8,20 +8,20 @@ Write a function called sum() that takes in two numbers as arguments and then re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSum() function below and check the console to see if the test passes.*/
 
 // Write your code here
-
-function sum(num1, num2) { //eslint-disable-line
-  var result = num1 + num2;
-  var answer = ('The sum of ' + num1 +  ' and ' + num2 + ' is ' + result + '.');
-  var myArray = [result, answer ];
+ 
+function sum (num1, num2) { //eslint-disable-line
+  let result = num1 + num2;
+  let answer = ('The sum of ' + num1 +  ' and ' + num2 + ' is ' + result + '.');
+  let sumArray = [result, answer];
   console.log([result, 'The sum of ' + num1 + ' and ' + num2 +  ' is ' + result +'.']);
   
-  return(myArray);
-
+  return sumArray;
 
 }
 
 // Here is the test for sum(); uncomment it to run it
-testSum(4, 7);
+testSum();
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -34,25 +34,26 @@ Write a function called multiply() that takes in two numbers as arguments and re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // Write your code here
+
 function multiply(num1, num2) { //eslint-disable-line
   let result = num1 * num2;
   let answer = ('The product of ' + num1 +' and '+ num2 + ' is ' + result +'.');
   let myArray = [result,answer];
-  console.log([result, 'The product of ' + num1 +' and '+ num2 + ' is ' + result +'.'])
-
-
-  //return(myArray);
+  console.log([result, 'The product of ' + num1 +' and '+ num2 + ' is ' + result +'.']);
+  
+  return myArray;
 }
 
 // Here is the test for multiply(); uncomment it to run it
-testMultiply(5,9);
+testMultiply();
 //multiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
 /* Problem 3
-Write a function called sumAndMultiply() that takes in three numbers as separate arguments and returns an array where the first element is the sum of those three numbers, the second element is the product of those three numbers,  and the third and fourth elements are strings that EXACTLY follow this example and use the values that were input into the function:
+Write a function called sumAndMultiply() that takes in three numbers as separate arguments and returns an array where the first element is the sum of those three numbers, the second element is the product of those three numbers,  
+//and the third and fourth elements are strings that EXACTLY follow this example and use the values that were input into the function:
 
 Third element: "4 and 7 and 5 sum to 16."
 Fourth element: "The product of 4 and 7 and 5 is 140."
@@ -62,12 +63,31 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
 // Write your code here
-function sumAndMultiply(a, b, c) { //eslint-disable-line
+//remember that the  func line is sumAndMultiply
+//Iris Leal helped me understand how to pull information out of an Array
+function sumAndMultiply(num1, num2, num3) { //eslint-disable-line
+//I need to add numbers with using an operation
+ let sumNum1AndNum2 = sum(num1,num2)[0];
+ let sumResult = sum(sumNum1AndNum2,num3)[0];
+ 
+ let thirdElement = (num1+ ' and ' + num2+ ' and ' + num3 + ' sum to ' + sumResult +'.');
+ 
+ console.log(sumResult);
+
+ let productArayPositionNum1AndNum2 = multiply(num1,num2)[0];
+ let productResult = multiply(productArayPositionNum1AndNum2,num3)[0];
+
+ let fourthElement = ('The product of ' + num1 + ' and ' + num2 + ' and ' + num3 + ' is ' + productResult +'.');
+ console.log(fourthElement);
+ //if (sumAndMultiply(4, 7, 5)[0] === 16 && sumAndMultiply(4, 7, 5)[1] === 140 && sumAndMultiply(4, 7, 5)[2] === '4 and 7 and 5 sum to 16.' && sumAndMultiply(4, 7, 5)[3] === 'The product of 4 and 7 and 5 is 140.')
+ let myArray = [sumResult, productResult, thirdElement, fourthElement];
+  return myArray;
 
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+//remember that this line should read testSumAndMultiply()
+testSumAndMultiply();
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
