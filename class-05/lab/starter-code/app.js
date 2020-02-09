@@ -40,8 +40,7 @@ function multiply(num1, num2) { //eslint-disable-line
   let myArray = [result,answer];
   console.log([result, 'The product of ' + num1 +' and '+ num2 + ' is ' + result +'.'])
 
-
-  //return(myArray);
+  return(myArray);
 }
 
 // Here is the test for multiply(); uncomment it to run it

@@ -49,9 +49,9 @@ function testMultiplyAnyArray() { //eslint-disable-line
     console.log('%c TEST FOR multiplyAnyArray() FAILS', 'color: red');
   }
 }
-// document.getElementById(testSum).innerHTML
-// document.getElementById(testMultiply).innerHTML
-// document.getElementById(testSumAndMultiply).innerHTML
-// document.getElementById(testSumArray).innerHTML
-// document.getElementById(testMultiplArray).innerHTML
-// document.getElementById(testMultiplyAnyArray).innerHTML
+document.getElementById("testSum").innerHTML
+document.getElementById('testMultiply').innerHTML
+document.getElementById('testSumAndMultiply').innerHTML
+document.getElementById('testSumArray').innerHTML
+document.getElementById('testMultiplArray').innerHTML
+document.getElementById('testMultiplyAnyArray').innerHTML
