@@ -7,12 +7,20 @@ table.addEventListener('click', removeItemFromCart);
 var cart;
 
 function loadCart() {
+  
   var cartItems = JSON.parse(localStorage.getItem('cart')) || [];
   cart = new Cart(cartItems);
+
 }
 
 // Make magic happen --- re-pull the Cart, clear out the screen and re-draw it
 function renderCart() {
+  var orderDisplay = document.getElementsByTagName('tbody');
+
+  
+  var valueOfCart = document.createElement('img');
+  orderDisplay.appendChild(valueOfCart);
+   
   loadCart();
   clearCart();
   showCart();
